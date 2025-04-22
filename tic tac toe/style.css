@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    font-family: "Atma", system-ui;
+    background-color: rgb(116, 11, 213);
+    color: white;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    position: relative;
+}
+
+.game {
+    font-family: 'Robot', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    position: relative;
+}
+
+.room {
+    border: solid black 2px;
+    font-size: 5vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.room:hover {
+    background-color: rgb(186, 117, 249);
+}
+
+.info {
+    font-family: "Atma", system-ui;
+    padding: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 150px;
+
+}
+
+.imagebox img {
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.one,
+.two,
+.three {
+    border-top: none;
+}
+
+.one,
+.four,
+.seven {
+    border-left: none;
+}
+
+.seven,
+.eight,
+.nine {
+    border-bottom: none;
+}
+
+.three,
+.six,
+.nine {
+    border-right: none;
+}
+
+#reset {
+    background-color: rgb(116, 11, 213);
+    color: white;
+    width: 14vw;
+    height: 4vw;
+    font-size: 2vw;
+    border-radius: 18%;
+}
+
+#reset:hover {
+    width: 15vw;
+    height: 5vw;
+}
+
+.gameinfo {
+    font-size: 4vw;
+}
+
+.line {
+    background-color: black;
+    height: 10px;
+    width: 0vw;
+    position: absolute;
+    transition: width 1s ease-in-out;
+}
+
+@media (max-width:1100px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imagebox img {
+        width: 0;
+        transition: width 1s ease-in-out;
+        height: 15vh;
+    }
+
+    .game {
+        font-family: 'Robot', sans-serif;
+        display: grid;
+        grid-template-columns: repeat(3, 20vw);
+        grid-template-rows: repeat(3, 20vw);
+    }
+
+    .info {
+        font-family: "Atma", system-ui;
+        padding: 34px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-left: 0px;
+        margin-top: 30px;
+
+    }
+
+    .gameinfo {
+        font-size: 30px;
+    }
+
+    #reset {
+        background-color: rgb(116, 11, 213);
+        color: white;
+        width: 14vh;
+        height: 4vh;
+        font-size: 2vh;
+        border-radius: 18%;
+    }
+
+    #reset:hover {
+        width: 15vh;
+        height: 5vh;
+    }
+
+    .line {
+        height: 0px;
+    }
+}
